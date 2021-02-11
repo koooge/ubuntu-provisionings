@@ -1,6 +1,5 @@
 #!/bin/bash -e
 
-curl -sS "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
-sudo python get-pip.py
-sudo pip install -q awscli
-rm get-pip.py
+curl -sS "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
+unzip -qq /tmp/awscliv2.zip -d /tmp
+sudo /tmp/aws/install
