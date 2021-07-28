@@ -7,11 +7,8 @@ RUBY_VERSION=3.0.2
 install_rbenv() {
   git clone https://github.com/rbenv/rbenv.git ~/.rbenv
   cd ~/.rbenv && src/configure && make -C src && cd -
-  mkdir -p ${HOME}/.bash.d
-#  cp ./.bash.d/ruby.sh ${HOME}/.bash.d/
-#  ~/.rbenv/bin/rbenv init
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
+  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+   ~/.rbenv/bin/rbenv init
 }
 
 install_ruby_build() {
