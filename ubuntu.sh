@@ -6,12 +6,12 @@ install_apt_packages() {
   sudo apt install -y curl git zip unzip bzip2 \
     ntp \
     gcc g++ make bison \
-    tig tree jq peco dos2unix lv silversearcher-ag direnv
+    tig tree jq peco dos2unix lv direnv
 }
 
 install_bash_profile() {
   mkdir -p ${HOME}/.bash.d
-  cp -p .bash_profile  > ${HOME}/.bashrc # FIXME: .profie?
+  cat .bash_profile >> ${HOME}/.bash_profile # FIXME: .profie?
 }
 
 install_languages() {
@@ -27,7 +27,7 @@ install_middlewares() {
 }
 
 install_tools() {
-  ./tool/install_heroku.sh
+  # ./tool/install_heroku.sh
   ./tool/install_awscli.sh
   # ./tool/install_gcloud.sh
   # ./tool/install_kubectl.sh
@@ -39,4 +39,4 @@ curl -sSL raw.github.com/koooge/dotfiles/master/install.sh | bash
 
 install_languages
 install_middlewares
-# install_tools
+install_tools
