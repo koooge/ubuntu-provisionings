@@ -2,8 +2,8 @@
 
 # Usage: `./install_node.sh`
 
-NVM_VERSION="v0.37.2"
-NODE_VERSION="lts/fermium"
+NVM_VERSION="v0.39.0"
+NODE_VERSION="lts/*"
 
 install_nvm() {
   curl -sSo- https://raw.githubusercontent.com/creationix/nvm/${NVM_VERSION}/install.sh | bash
