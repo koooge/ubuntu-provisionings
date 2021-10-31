@@ -38,5 +38,5 @@ install_bash_profile
 curl -sSL raw.github.com/koooge/dotfiles/master/install.sh | bash
 
 install_languages
-install_middlewares
+# install_middlewares
 install_tools
