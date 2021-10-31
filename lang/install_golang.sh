@@ -2,7 +2,7 @@
 
 # Usage `./install_golang.sh && source ~/.bash_profile`
 
-GO_VERSION=1.15.8
+GO_VERSION=1.17.2
 
 GO_URL=https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz
 
@@ -15,13 +15,13 @@ install_golang() {
 }
 
 go_get_packages() {
-  go get golang.org/x/tools/cmd/godoc
-  go get golang.org/x/tools/cmd/goimports
-#  go get golang.org/x/tools/cmd/gorename
-#  go get golang.org/x/tools/cmd/guru
+#  go install golang.org/x/tools/cmd/godoc@latest
+#  go install golang.org/x/tools/cmd/goimports@latest
+#  go install golang.org/x/tools/cmd/gorename@latest
+#  go install golang.org/x/tools/cmd/guru@latest
 
-#  go get github.com/golang/lint/golint
-  go get github.com/motemen/ghq
+#  go install github.com/golang/lint/golint
+  go install github.com/x-motemen/ghq@latest
 	echo "" >> ~/.gitconfig
 	echo "[ghq]" >> ~/.gitconfig
 	echo "	root = ${HOME}/go/src" >> ~/.gitconfig
