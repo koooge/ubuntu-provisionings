@@ -11,7 +11,7 @@ install_apt_packages() {
 
 install_bash_profile() {
   mkdir -p ${HOME}/.bash.d
-  cat .bash_profile >> ${HOME}/.bash_profile # FIXME: .profie?
+  cat .bash_profile >> ${HOME}/.bashrc
 }
 
 install_languages() {
@@ -20,6 +20,7 @@ install_languages() {
   ./lang/install_node.sh
   # ./lang/install_python.sh
   # ./lang/install_ruby.sh
+  # ./lang/install_rust.sh
 }
 
 install_middlewares() {

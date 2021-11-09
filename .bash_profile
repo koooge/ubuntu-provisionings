@@ -1,4 +1,3 @@
-if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
 
 # load bash flagment
 if [ -d "${HOME}/.bash.d" ] ; then
