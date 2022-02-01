@@ -2,7 +2,7 @@
 
 # Usage `./install_golang.sh && source ~/.bash_profile`
 
-GO_VERSION=1.17.2
+GO_VERSION=1.17.6
 
 GO_URL=https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz
 
