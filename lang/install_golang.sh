@@ -2,9 +2,9 @@
 
 # Usage `./install_golang.sh && source ~/.bash_profile`
 
-GO_VERSION=1.17.6
+GO_VERSION=1.19.1
 
-GO_URL=https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz
+GO_URL=https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz
 
 install_golang() {
   wget -qO - ${GO_URL} | sudo tar zxC /usr/local
