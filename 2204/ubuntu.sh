@@ -20,7 +20,7 @@ install_languages() {
   ./lang/install_node.sh
   # ./lang/install_python.sh
   # ./lang/install_ruby.sh
-  # ./lang/install_rust.sh
+  ./lang/install_rust.sh
 }
 
 install_middlewares() {
@@ -34,10 +34,10 @@ install_tools() {
   # ./tool/install_kubectl.sh
 }
 
-# install_apt_packages
-# install_bash_profile
-# curl -sSL raw.github.com/koooge/dotfiles/master/install.sh | bash
+install_apt_packages
+install_bash_profile
+curl -sSL raw.github.com/koooge/dotfiles/master/install.sh | bash
 
-# install_languages
-# install_middlewares
-# install_tools
+install_languages
+install_middlewares
+install_tools
