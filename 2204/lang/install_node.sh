@@ -2,11 +2,11 @@
 
 # Usage: `./install_node.sh`
 
-NVM_VERSION="v0.39.3"
+NVM_VERSION="v0.39.7"
 NODE_VERSION="lts/*"
 
 install_nvm() {
-  curl -sSo- https://raw.githubusercontent.com/creationix/nvm/${NVM_VERSION}/install.sh | bash
+  curl -sSo- https://raw.githubusercontent.com/nvm-sh/nvm/${NVM_VERSION}/install.sh | bash
   source ${HOME}/.nvm/nvm.sh
 }
 
