@@ -4,12 +4,14 @@
 
 GO_VERSION=1.22.2
 
-GO_URL=https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz
+ARCH=$(dpkg --print-architecture)
+DIR="$(dirname "$0")"
+GO_URL=https://go.dev/dl/go${GO_VERSION}.linux-${ARCH}.tar.gz
 
 install_golang() {
   wget -qO - ${GO_URL} | sudo tar zxC /usr/local
 
-  cp ./.bash.d/go.sh ${HOME}/.bash.d/
+  cp ${DIR}/../.bash.d/go.sh ${HOME}/.bash.d/
   export PATH=${PATH}:/usr/local/go/bin
   export GOPATH=${HOME}/go
 }
