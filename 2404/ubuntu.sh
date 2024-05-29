@@ -24,7 +24,7 @@ install_languages() {
 }
 
 install_middlewares() {
-  ./install_docker.sh
+  # ./install_docker.sh # Prefer Docker Desktop WSL 2 backend on Windows
 }
 
 install_tools() {

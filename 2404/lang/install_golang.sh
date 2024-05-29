@@ -2,7 +2,7 @@
 
 # Usage `./install_golang.sh && source ~/.bash_profile`
 
-GO_VERSION=1.22.2
+GO_VERSION=1.22.3
 
 ARCH=$(dpkg --print-architecture)
 DIR="$(dirname "$0")"
