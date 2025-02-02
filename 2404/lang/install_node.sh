@@ -2,7 +2,7 @@
 
 # Usage: `./install_node.sh`
 
-NVM_VERSION="v0.39.7"
+NVM_VERSION="v0.40.1"
 NODE_VERSION="lts/*"
 
 install_nvm() {
