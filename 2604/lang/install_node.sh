@@ -1,13 +1,13 @@
-#!/bin/bash -e
+#!/bin/bash
+set -eo pipefail
 
-# Usage: `./install_node.sh`
-
-NVM_VERSION="v0.40.1"
 NODE_VERSION="lts/*"
 
 install_nvm() {
-  curl -sSo- https://raw.githubusercontent.com/nvm-sh/nvm/${NVM_VERSION}/install.sh | bash
-  source ${HOME}/.nvm/nvm.sh
+  local nvm_version
+  nvm_version=$(curl -fsSL https://api.github.com/repos/nvm-sh/nvm/releases/latest | jq -er '.tag_name')
+  curl -fsSL "https://raw.githubusercontent.com/nvm-sh/nvm/${nvm_version}/install.sh" | bash
+  source "${HOME}/.nvm/nvm.sh"
 }
 
 install_node() {

@@ -4,6 +4,7 @@ install_apt_packages() {
   sudo apt update -qq
   sudo DEBIAN_FRONTEND=noninteractive apt dist-upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"
   sudo apt install -y curl git zip unzip bzip2 \
+    chrony \
     gcc g++ make bison \
     tig tree jq peco dos2unix lv direnv
 }
@@ -27,8 +28,11 @@ install_languages() {
 # }
 
 install_tools() {
+  ./tool/install_codex.sh
+
   ./tool/install_awscli.sh
   # ./tool/install_gcloud.sh
+
   ./tool/install_kubectl.sh
 }
 

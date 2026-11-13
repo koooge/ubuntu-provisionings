@@ -1,12 +1,11 @@
-#!/bin/bash -e
+#!/bin/bash
+set -eo pipefail
 
-# Usage `./install_golang.sh && source ~/.bash_profile`
-
-GO_VERSION=1.23.5
+GO_VERSION=$(curl -fsSL 'https://go.dev/dl/?mode=json' | jq -er '.[0].version')
 
 ARCH=$(dpkg --print-architecture)
 DIR="$(dirname "$0")"
-GO_URL=https://go.dev/dl/go${GO_VERSION}.linux-${ARCH}.tar.gz
+GO_URL=https://go.dev/dl/${GO_VERSION}.linux-${ARCH}.tar.gz
 
 install_golang() {
   wget -qO - ${GO_URL} | sudo tar zxC /usr/local
